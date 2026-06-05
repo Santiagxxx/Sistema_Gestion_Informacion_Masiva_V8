@@ -16,7 +16,7 @@ from motor_excel import CRITERIOS, MESES_FOTO, analizar_excel, exportar_excel
 
 st.set_page_config(
     page_title="Validación de Tiendas Ancla",
-    page_icon="✅",
+    page_icon="💠",
     layout="wide",
 )
 
@@ -312,13 +312,7 @@ st.markdown(
     """
     <div class="app-header">
       <div class="app-title">Sistema de validación de Tiendas Ancla</div>
-      <div class="app-subtitle">Revisión de exhibiciones Nestlé · Febrero / Marzo / Abril · Exportación automática a Excel</div>
-      <div class="pill-row">
-        <span class="pill">Versión 8 · Streamlit Cloud</span>
-        <span class="pill">Memoria persistente</span>
-        <span class="pill">Caché limitado para nube</span>
-        <span class="pill">Colores Excel corregidos</span>
-      </div>
+      <div class="app-subtitle">Revisión de exhibiciones Nestlé · Febrero / Marzo / Abril </div>
     </div>
     """,
     unsafe_allow_html=True,
