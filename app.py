@@ -57,7 +57,7 @@ st.markdown(
       }
 
       .app-subtitle {
-        color: rgba(255,255,255,.82);
+        color: rgba(0, 0, 0, 1);
         font-size: .98rem;
       }
 
