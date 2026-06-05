@@ -42,8 +42,8 @@ st.markdown(
       }
 
       .app-header {
-        background: linear-gradient(135deg, #111827 0%, #1f2937 55%, #2563eb 100%);
-        color: white;
+        background: white;
+        color: black;
         padding: 1.25rem 1.45rem;
         border-radius: 18px;
         margin-bottom: 1rem;
