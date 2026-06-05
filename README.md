@@ -147,7 +147,7 @@ Los colores quedan configurados en formato ARGB correcto para Excel:
 
 Cambios principales:
 
-- Caché de imágenes limitado para evitar consumo excesivo de memoria en Streamlit Cloud.
+- Caché de imágenes limitado para evitar consumo excesivo de memoria
 - `st.cache_data` para imágenes limitado a `max_entries=30` y `ttl=1800`.
 - Precarga de imágenes desactivada por defecto y limitada a pocas URL.
 - Filtro inicial para elegir qué revisar al cargar el Excel:
@@ -155,7 +155,7 @@ Cambios principales:
   - Filtrar por color del Excel: rojo, verde, amarillo, mixto o sin color.
   - Todas las tiendas con fotos.
 - Detección de colores ya aplicados en el Excel entre columnas A y W.
-- Opción para cargar un respaldo JSON y recuperar decisiones en Streamlit Cloud.
+- Opción para cargar un respaldo JSON y recuperar decisiones.
 - Archivo `.streamlit/config.toml` incluido para despliegue.
 
 ### Recomendación para Streamlit Cloud
