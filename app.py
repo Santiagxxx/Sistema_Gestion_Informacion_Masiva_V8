@@ -715,7 +715,7 @@ st.markdown(
 st.markdown('<div class="decision-group-title">Aprobación</div>', unsafe_allow_html=True)
 c_gana, c_guardar_sin, c_quitar = st.columns([1, 1, 1])
 with c_gana:
-    if st.button("🟢 GANA", type="primary", use_container_width=True):
+    if st.button("GANA", type="primary", use_container_width=True):
         guardar_decision("GANA", tienda_actual, tiendas_en_rango, avanzar=True)
 
 with c_guardar_sin:
@@ -733,31 +733,29 @@ with c_quitar:
 st.markdown('<div class="decision-group-title">Rechazo / No gana</div>', unsafe_allow_html=True)
 r1, r2, r3 = st.columns(3)
 with r1:
-    if st.button("🔴 NO GANA", use_container_width=True):
+    if st.button("NO GANA", use_container_width=True):
         guardar_decision("NO GANA", tienda_actual, tiendas_en_rango, avanzar=True)
 with r2:
-    if st.button("🔴 NESTUM EN LA EXHIBICION", use_container_width=True):
+    if st.button("NESTUM EN LA EXHIBICION", use_container_width=True):
         guardar_decision("NESTUM EN LA EXHIBICION", tienda_actual, tiendas_en_rango, avanzar=True)
 with r3:
-    if st.button("🔴 NESTOGENO EN LA EXHIBICION", use_container_width=True):
+    if st.button("NESTOGENO EN LA EXHIBICION", use_container_width=True):
         guardar_decision("NESTOGENO EN LA EXHIBICION", tienda_actual, tiendas_en_rango, avanzar=True)
 
 r4, r5, _ = st.columns(3)
 with r4:
-    if st.button("🔴 NESTUM Y NESTOGENO", use_container_width=True):
+    if st.button("NESTUM Y NESTOGENO", use_container_width=True):
         guardar_decision("NESTUM Y NESTOGENO EN LA EXHIBICION", tienda_actual, tiendas_en_rango, avanzar=True)
 with r5:
-    if st.button("🔴 NO TIENE 3 O MÁS CATEGORÍAS", use_container_width=True):
+    if st.button("NO TIENE 3 O MÁS CATEGORÍAS", use_container_width=True):
         guardar_decision("NO TIENE 3 O MAS CATEGORIAS", tienda_actual, tiendas_en_rango, avanzar=True)
 
 st.markdown('<div class="decision-group-title">Enviar a revisión</div>', unsafe_allow_html=True)
 a1, a2, _ = st.columns(3)
 with a1:
-    if st.button("🟡 POCOS PRODUCTOS", use_container_width=True):
+    if st.button("POCOS PRODUCTOS", use_container_width=True):
         guardar_decision("POCOS PRODUCTOS", tienda_actual, tiendas_en_rango, avanzar=True)
-with a2:
-    if st.button("🟡 NO ES LA MISMA TIENDA", use_container_width=True):
-        guardar_decision("NO ES LA MISMA TIENDA", tienda_actual, tiendas_en_rango, avanzar=True)
+
 
 with st.expander("Modo corrección manual"):
     criterios = list(CRITERIOS.keys())
