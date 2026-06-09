@@ -200,47 +200,72 @@ st.markdown(
         border-radius: 12px;
       }
 
-      /* Botones principales y secundarios */
-        .stButton button,
-        .stDownloadButton button,
-        .stLinkButton a {
-        background: linear-gradient(
-            135deg,
-            var(--control-blue-dark) 0%,
-            var(--control-blue) 58%,
-            var(--control-blue-light) 100%
-        ) !important;
-        color: #FFFFFF !important;
-        border: 1px solid rgba(147, 197, 253, 0.45) !important;
-        border-radius: 14px !important;
-        min-height: 2.75rem !important;
-        font-weight: 850 !important;
-        box-shadow: 0 8px 20px rgba(37, 99, 235, 0.22) !important;
-        }
+      .stButton button,
+.stDownloadButton button,
+.stLinkButton a {
+  background: linear-gradient(
+    135deg,
+    #315CFF 0%,
+    #246BFF 42%,
+    #6C3BFF 100%
+  ) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(147, 197, 253, 0.38) !important;
+  border-radius: 14px !important;
+  min-height: 2.85rem !important;
+  padding: 0.65rem 1.35rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+  box-shadow:
+    0 12px 28px rgba(49, 92, 255, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22) !important;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    filter 0.18s ease !important;
+}
 
-        /* Hover de botones */
-        .stButton button:hover,
-        .stDownloadButton button:hover,
-        .stLinkButton a:hover {
-        background: linear-gradient(
-            135deg,
-            #1D4ED8 0%,
-            #0284C7 100%
-        ) !important;
-        color: #FFFFFF !important;
-        border-color: rgba(191, 219, 254, 0.75) !important;
-        transform: translateY(-1px);
-        box-shadow: 0 12px 28px rgba(37, 99, 235, 0.32) !important;
-        }
+/* Hover */
+.stButton button:hover,
+.stDownloadButton button:hover,
+.stLinkButton a:hover {
+  background: linear-gradient(
+    135deg,
+    #3B6BFF 0%,
+    #2D78FF 42%,
+    #7A4DFF 100%
+  ) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-1px) !important;
+  filter: brightness(1.05) !important;
+  box-shadow:
+    0 16px 34px rgba(49, 92, 255, 0.42),
+    0 0 18px rgba(108, 59, 255, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
+}
 
-        /* Botón deshabilitado */
-        .stButton button:disabled,
-        .stDownloadButton button:disabled {
-        background: rgba(148, 163, 184, 0.35) !important;
-        color: rgba(255, 255, 255, 0.72) !important;
-        border-color: rgba(148, 163, 184, 0.35) !important;
-        box-shadow: none !important;
-        }
+/* Click */
+.stButton button:active,
+.stDownloadButton button:active,
+.stLinkButton a:active {
+  transform: translateY(0px) scale(0.99) !important;
+  box-shadow:
+    0 8px 18px rgba(49, 92, 255, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+}
+
+/* Deshabilitado */
+.stButton button:disabled,
+.stDownloadButton button:disabled {
+  background: linear-gradient(
+    135deg,
+    rgba(100, 116, 139, 0.55) 0%,
+    rgba(71, 85, 105, 0.55) 100%
+  ) !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+  box-shadow: none !important;
+  border-color: rgba(148, 163, 184, 0.25) !important;
+}
 
         /* Slider: bolita */
         div[data-testid="stSlider"] div[role="slider"] {
