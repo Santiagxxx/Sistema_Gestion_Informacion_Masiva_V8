@@ -30,9 +30,13 @@ st.markdown(
         --text-main: #101828;
         --text-muted: #667085;
         --green: #92D050;
-        --red: #2563eb;
         --yellow: #FFFF00;
         --blue: #2563eb;
+        --control-blue: #2563EB;
+        --control-blue-dark: #1D4ED8;
+        --control-blue-light: #38BDF8;
+        --control-blue-soft: rgba(37, 99, 235, 0.18);
+        --control-track: rgba(148, 163, 184, 0.35);
       }
 
       .block-container {
@@ -195,7 +199,111 @@ st.markdown(
       div[data-testid="stDataFrame"] {
         border-radius: 12px;
       }
-    </style>
+
+      /* Botones principales y secundarios */
+        .stButton button,
+        .stDownloadButton button,
+        .stLinkButton a {
+        background: linear-gradient(
+            135deg,
+            var(--control-blue-dark) 0%,
+            var(--control-blue) 58%,
+            var(--control-blue-light) 100%
+        ) !important;
+        color: #FFFFFF !important;
+        border: 1px solid rgba(147, 197, 253, 0.45) !important;
+        border-radius: 14px !important;
+        min-height: 2.75rem !important;
+        font-weight: 850 !important;
+        box-shadow: 0 8px 20px rgba(37, 99, 235, 0.22) !important;
+        }
+
+        /* Hover de botones */
+        .stButton button:hover,
+        .stDownloadButton button:hover,
+        .stLinkButton a:hover {
+        background: linear-gradient(
+            135deg,
+            #1D4ED8 0%,
+            #0284C7 100%
+        ) !important;
+        color: #FFFFFF !important;
+        border-color: rgba(191, 219, 254, 0.75) !important;
+        transform: translateY(-1px);
+        box-shadow: 0 12px 28px rgba(37, 99, 235, 0.32) !important;
+        }
+
+        /* Botón deshabilitado */
+        .stButton button:disabled,
+        .stDownloadButton button:disabled {
+        background: rgba(148, 163, 184, 0.35) !important;
+        color: rgba(255, 255, 255, 0.72) !important;
+        border-color: rgba(148, 163, 184, 0.35) !important;
+        box-shadow: none !important;
+        }
+
+        /* Slider: bolita */
+        div[data-testid="stSlider"] div[role="slider"] {
+        background-color: var(--control-blue) !important;
+        border-color: var(--control-blue) !important;
+        box-shadow: 0 0 0 4px var(--control-blue-soft) !important;
+        }
+
+        /* Slider: números y textos */
+        div[data-testid="stSlider"] label,
+        div[data-testid="stSlider"] span,
+        div[data-testid="stSlider"] p {
+        color: var(--app-text) !important;
+        }
+
+        /* Toggle activo */
+        div[data-testid="stToggle"] button[aria-checked="true"],
+        div[data-testid="stToggle"] div[aria-checked="true"] {
+        background-color: var(--control-blue) !important;
+        border-color: var(--control-blue) !important;
+        }
+
+        /* Toggle inactivo */
+        div[data-testid="stToggle"] button[aria-checked="false"],
+        div[data-testid="stToggle"] div[aria-checked="false"] {
+        background-color: var(--control-track) !important;
+        border-color: var(--control-track) !important;
+        }
+
+        /* Radio seleccionado */
+        div[data-testid="stRadio"] [role="radio"][aria-checked="true"] {
+        border-color: var(--control-blue) !important;
+        background-color: var(--control-blue) !important;
+        }
+
+        /* Checkbox seleccionado */
+        div[data-testid="stCheckbox"] [aria-checked="true"] {
+        border-color: var(--control-blue) !important;
+        background-color: var(--control-blue) !important;
+        }
+
+        /* Etiquetas seleccionadas del multiselect */
+        div[data-baseweb="tag"] {
+        background: var(--control-blue) !important;
+        color: #FFFFFF !important;
+        border-radius: 10px !important;
+        }
+
+        div[data-baseweb="tag"] span {
+        color: #FFFFFF !important;
+        }
+
+        /* Quitar fondo azul raro en textos al seleccionar/focus */
+        div[data-testid="stRadio"] label,
+        div[data-testid="stRadio"] label *,
+        div[data-testid="stToggle"] label,
+        div[data-testid="stToggle"] label *,
+        div[data-testid="stCheckbox"] label,
+        div[data-testid="stCheckbox"] label * {
+        background: transparent !important;
+        }
+                                              
+    </style>                                 
     """,
     unsafe_allow_html=True,
 )
