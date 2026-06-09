@@ -30,7 +30,7 @@ st.markdown(
         --text-main: #101828;
         --text-muted: #667085;
         --green: #92D050;
-        --red: #FF0000;
+        --red: #2563eb;
         --yellow: #FFFF00;
         --blue: #2563eb;
       }
@@ -312,7 +312,7 @@ st.markdown(
     """
     <div class="app-header">
       <div class="app-title">Sistema de validación de Tiendas Ancla</div>
-      <div class="app-subtitle">Revisión de exhibiciones Nestlé · Febrero / Marzo / Abril </div>
+      <div class="app-subtitle">Revisión de exhibiciones</div>
     </div>
     """,
     unsafe_allow_html=True,
