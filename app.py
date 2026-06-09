@@ -205,9 +205,9 @@ st.markdown(
 .stLinkButton a {
   background: linear-gradient(
     135deg,
-    #315CFF 0%,
-    #246BFF 42%,
-    #6C3BFF 100%
+    #4F46E5 0%,
+    #6366F1 42%,
+    #7C3AED 100%
   ) !important;
   color: #FFFFFF !important;
   border: 1px solid rgba(147, 197, 253, 0.38) !important;
