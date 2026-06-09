@@ -204,7 +204,12 @@ st.markdown(
         .stButton button,
         .stDownloadButton button,
         .stLinkButton a {
-        background: linear-gradient(var(--control-blue-light)) !important;
+        background: linear-gradient(
+            135deg,
+            var(--control-blue-dark) 0%,
+            var(--control-blue) 58%,
+            var(--control-blue-light) 100%
+        ) !important;
         color: #FFFFFF !important;
         border: 1px solid rgba(147, 197, 253, 0.45) !important;
         border-radius: 14px !important;
